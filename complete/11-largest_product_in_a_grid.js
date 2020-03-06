@@ -5,7 +5,6 @@ const largestProduct = (grid) => {
   const scores = []
 
   // cycle through the grid, one array at a time
-  
   for (let i = 0; i < grid.length; i++) {
     // then through each array, using i and then j to produce mini arrays of four and push them into the scores array
     for (let j = 0; j < grid[i].length; j++) {
