@@ -2,8 +2,12 @@ const { highlyDivisible } = require('../incomplete/12-highly_divisible_triangula
 
 describe('highlyDivisible', () => {
   it('returns an array', () => {
-    // not working? works if [500]
-    // expect(500).toEqual(expect.any(Array))
+    const result = highlyDivisible()
+    expect(result).toEqual(expect.any(Array))
+  })
+  it('returns an array of numbers', () => {
+    const result = highlyDivisible()
+    expect(result).toContainEqual(expect.any(Number))
   })
 
 })

@@ -1,6 +1,5 @@
-const highlyDivisible = (limit) => {
-  const arr = [1, 2]
-  return arr
+const highlyDivisible = () => {
+  return [1]
 } 
 
 
