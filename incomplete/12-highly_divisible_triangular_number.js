@@ -2,7 +2,7 @@
 const makeTriangleNumbers = (factorLimit) => {
   let trianglesArr = [1]
   
-  // cant get this to work
+  // cant get this to work, need to increment i properly
   for (let i = 1; trianglesArr.length < factorLimit; i += (i+1)) {
     trianglesArr.push(i + (i + 1))
   }
