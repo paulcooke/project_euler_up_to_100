@@ -2,21 +2,29 @@
 const makeTriangleNumbers = (factorLimit) => {
   let trianglesArr = [1]
   
-  // cant get this to work, need to increment i properly
-  for (let i = 1; trianglesArr.length < factorLimit; i += (i+1)) {
-    trianglesArr.push(i + (i + 1))
+  // trying a while loop
+  let iterator = 2
+  // ****** should be less than or equal to or factorLimit + 1?
+  while (checkFactorCount(trianglesArr[trianglesArr.length - 1]) < factorLimit) {
+    trianglesArr.push(trianglesArr[trianglesArr.length - 1] + iterator)
+    iterator ++
   }
+  // console.log(trianglesArr)
   return trianglesArr
 }
 
-// function to check the number of factors at any point
-const checkFactorCount = () => {
 
+// function to check the number of factors at any point
+const checkFactorCount = (num) => {
+  let factorCount = []
+  for (let i = 0; i <= num; i++) {
+    if (num % i === 0) factorCount.push(i)
+  }
+  // console.log('factor count:', factorCount)
+  return factorCount.length
 }
 
-const highlyDivisible = () => {
-  
-} 
 
+console.log(makeTriangleNumbers(500).reverse()[0])
 
-module.exports = { makeTriangleNumbers, checkFactorCount, highlyDivisible }
+module.exports = { makeTriangleNumbers, checkFactorCount }
