@@ -1,6 +1,7 @@
 // one function to take in the array of strings, reduce to sum them
 const convertAndSum = (arrayOfStrings) => {
-  return arrayOfStrings
+  const bigInts = arrayOfStrings.map(x => BigInt(x))
+  return parseInt(bigInts.reduce((a, b) => a + b))
 }
 
 console.log(convertAndSum(
@@ -107,3 +108,5 @@ console.log(convertAndSum(
     '53503534226472524250874054075591789781264330331690'
   ]
 ))
+
+module.exports = { convertAndSum }
