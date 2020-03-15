@@ -1,4 +1,4 @@
-const { checkFactorCount, makeTriangleNumbers } = require('../incomplete/12-highly_divisible_triangular_number')
+const { checkFactorCount, makeTriangleNumbers } = require('../complete/12-highly_divisible_triangular_number')
 
 describe('makeTriangleNumbers', () => {
   it('returns an array', () => {

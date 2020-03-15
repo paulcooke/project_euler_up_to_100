@@ -2,9 +2,9 @@
 const makeTriangleNumbers = (factorLimit) => {
   let trianglesArr = [1]
   
-  // trying a while loop
+  // use a while loop to generate the next number for checking
   let iterator = 2
-  // ****** should be less than or equal to or factorLimit + 1?
+
   while (checkFactorCount(trianglesArr[trianglesArr.length - 1]) < factorLimit) {
     trianglesArr.push(trianglesArr[trianglesArr.length - 1] + iterator)
     iterator ++
@@ -24,7 +24,7 @@ const checkFactorCount = (num) => {
   return factorCount.length
 }
 
-
-console.log(makeTriangleNumbers(500).reverse()[0])
+// comment in this line to run for the challenge - it takes a while to run...
+// console.log(makeTriangleNumbers(500).reverse()[0])
 
 module.exports = { makeTriangleNumbers, checkFactorCount }
