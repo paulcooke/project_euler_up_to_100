@@ -1,14 +1,5 @@
-const testForPrime = (numberToTest) => {
-  if (numberToTest === 1) {
-    return false
-  } else if (numberToTest === 2) {
-    return true
-  } else {
-    for (let i = 2; i < numberToTest; i++) {
-      if (numberToTest % i === 0) return false
-    }
-    return true
-  }
+const testBigInt = (num) => {
+  return parseInt(num)
 }
 
-console.log(testForPrime(775121))
+console.log(testBigInt('45629298757029385980623469872356349085745367098'))
