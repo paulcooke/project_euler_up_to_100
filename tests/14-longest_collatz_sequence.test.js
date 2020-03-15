@@ -1,4 +1,4 @@
-const { makeCollatzSequence, checkForHighest, solveProblem } = require('../incomplete/14-longest_collatz_sequence')
+const { makeCollatzSequence, checkForHighest, solveProblem } = require('../complete/14-longest_collatz_sequence')
 
 describe('checkForHighest', () => {
   it('returns a number', () => {
